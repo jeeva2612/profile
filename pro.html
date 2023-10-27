@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .profile-card {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #profile-image {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+
+    #more-info {
+      display: none;
+    }
+
+    button {
+      background-color: #2710aa;
+      color: rgb(18, 196, 57);
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px 2px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img id="profile-image" src="c:\Users\admin\Desktop\w3images\JEEVA.jpg" alt="JEEVA">
+    <h2>JEEVA</h2>
+    <p>Occupation: College Student</p>
+    <p>Email: jeevamgv@email.com</p>
+    <button id="show-info-button" onclick="toggleInfo()">Show More</button>
+    <div id="more-info">
+      <p>Location: Vellakovil,Tiruppur(dt),Tamilnadu</p>
+      <p>Interests: Web Development, Coding, Design</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo() {
+      var info = document.getElementById("more-info");
+      var button = document.getElementById("show-info-button");
+
+      if (info.style.display === "none") {
+        info.style.display = "block";
+        button.innerHTML = "Show Less";
+      } else {
+        info.style.display = "none";
+        button.innerHTML = "Show More";
+      }
+    }
+  </script>
+</body>
+</html>
